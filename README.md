@@ -1,13 +1,17 @@
-** PULL REQUESTS ARE WELCOME **
+http://iroxtion.com
+
+**PULL REQUESTS ARE WELCOME AND ENCOURAGED**
 
 A simple comparisson between different JavaScript inheritance (composition) approaches with 
-extensive testing of the results.
+extensive testing of the results. **The main goal of this repository is to better your understanding of JavaScript prototypal inheritance and its inner workings by showing you how different inheritance techniques are coded and how objects produced by these techniques compare to each other.**
 
 If you are familiar with JavaScript prototype chain feature but yet have to grasp it internally, this is for you. If you look at the source code and their corresponding output you can gain insight in how the prototype chain is formed and how to test objects against each other.
 
-For a visual representation, check the "Visual Representation" section of this file
+For a **visual representation**, check the "Visual Representation" section of this file
 
-For a list of *some* of the insights that you can get from this code, check the "Conclusions" section of this file.
+For a list of *some* of the insights that you can get from this code, as well as practical examples, **be sure to check the "Conclusions" section of this file.**
+
+Although it may seem to be unnecesarily extensive testing and with some repetitions, you have to hammer this in your head, specially if you come from a class based Object Oriented Programming Language.
 
 # What's in the .js files
 
@@ -101,4 +105,96 @@ To visualize the objects of this repository, follow these instructions:
 
 # Conclusions
 
-Under construction...
+## Reference
+
+* To **check if an Object has another Object *ANYWHERE* in the prototype chain**, you should do, according to the pattern you use:
+
+        // Constructor pattern
+        childObject instanceof  parentObject
+
+        parentObject instanceof superParentObject
+
+        childObject instanceof  superParentObject
+
+        // Objects only
+        parentObject.isPrototypeOf(childObject)
+
+        superParentObject.isPrototypeOf(parentObject)
+
+        superParentObject.isPrototypeOf(childObject)
+
+    All of these will return true. But these will all return false:
+
+        // Constructor pattern
+        parentObject instanceof childObject
+
+        superParentObject instanceof childObject
+        superParentObject instanceof parentObject
+
+        // Objects only
+        childObject.isPrototypeOf(parentObject)
+
+        parentObject.isPrototypeOf(superParentObject)
+
+        childObject.isPrototypeOf(superParentObject)
+
+* To **check if an Object has another Object as *DIRECT PROTOTYPE* in the prototype chain**, you should do, according to the pattern you use:
+
+        //Constructor pattern
+        Object.getPrototypeOf(childObject) === parentObject.prototype
+        Object.getPrototypeOf(parentObject) === superParentObject.prototype
+
+        //Objects only
+        Object.getPrototypeOf(childObject) === parentObject
+        Object.getPrototypeOf(parentObject) === superParentObject
+
+    Will all return true. But these will all return false:
+
+        //Constructor pattern
+        Object.getPrototypeOf(childObject) === superParentObject.prototype
+
+        //Objects only
+        Object.getPrototypeOf(childObject) === superParentObject
+
+## Practical example
+
+Lets do another example to clear things up. For this example, lets say we have four objects:
+
+1. ObjectA
+2. ObjectB
+3. ObjectC
+4. ObjectD
+
+`ObjectD` inherits from `ObjectC`. `ObjectC` inherits from `ObjectB`. `ObjectB` inherits from `ObjectA`.
+
+#### How to check if `ObjectD` has other objects in any part of it's prototype chain
+
+**If using the constructor Pattern**
+
+    ObjectD instanceof ObjectB      // true
+    ObjectB instanceof ObjectD      // false -> does ObjectB contain ObjectD in its prototype chain? No it does not. ObjectB only contains ObjectA
+
+    ObjectD instanceof ObjectC      // true
+    ObjectD instanceof ObjectA      // true
+
+**If using only objects**
+
+    ObjectB.isPrototypeOf(ObjectD)      // true
+    ObjectD.isPrototypeOf(ObjectB)      // false -> does ObjectB contain ObjectD in its prototype chain? No it does not. ObjectB only contains ObjectA
+
+    ObjectC.isPrototypeOf(ObjectD)      // true
+    ObjectA.isPrototypeOf(ObjectD)      // true
+
+#### How to check if `ObjectD` has any of the other objects as direct link in it's prototype chain
+
+**If using the constructor pattern**
+
+    Object.getPrototypeOf(ObjectD) === ObjectC.prototype    // true
+    Object.getPrototypeOf(ObjectD) === ObjectB.prototype    // false
+    Object.getPrototypeOf(ObjectD) === ObjectA.prototype    // false
+
+**If using only objects**
+
+    Object.getPrototypeOf(ObjectD) === ObjectC    // true
+    Object.getPrototypeOf(ObjectD) === ObjectB    // false
+    Object.getPrototypeOf(ObjectD) === ObjectA    // false
