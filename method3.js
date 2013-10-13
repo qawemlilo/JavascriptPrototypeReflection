@@ -1,16 +1,15 @@
 /*
 
-Este metodo no usa funciones, usa solo objetos.
+This file does not use function as contructors. Everything is an object literal.
 
-Pros: 
-    No hay que definir manualmente los prototypos
-    No hay que definir el constructor
+Advantages
 
-Contra:
-    Hay que llamar al metodo init en cada instanciacion
+    *   It's not necessary to manually specify the prototype of an object
 
+Disadvantages
+
+    *   For constructor-like initialization, the method init() has to be called after each instantiation
 */
-
 
 {
     //This is just to redirect console.log to a file instead of the console.
