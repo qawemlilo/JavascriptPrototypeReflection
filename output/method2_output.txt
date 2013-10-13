@@ -1,4 +1,4 @@
-Inheritance (composition) method one: constructor pattern
+Inheritance (composition) method two: constructor pattern alternative
 
 >>>>>>>>>>>>>>-----------------------<<<<<<<<<<<<<<<
          Testing Base Objects self-reflection
@@ -25,9 +25,9 @@ Gaston.__proto__ =  { sayHi: [Function] }
 
 (Gaston.constructor === Person)  true
 
-Gaston.constructor =  function (name) {
-    this.name = name;
-}
+Gaston.constructor =  function Person(name) {
+        this.name = name;
+    }
 
 {sayHi} Hey there, Gaston!
 {shoot} Gaston does not know how to shoot
@@ -47,16 +47,16 @@ Object.getPrototypeOf(Gaston) === Defender.prototype     false
 ---Fede---
 ------------
 
-Fede.__proto__ =  { constructor: [Function], shoot: [Function] }
+Fede.__proto__ =  { constructor: [Function: Footballer], shoot: [Function] }
 
 (Fede.constructor === Person)  false
 (Fede.constructor === Footballer)  true
 
-Fede.constructor =  function (name, position, team) {
-    Person.call(this, name);
-    this.position = position;
-    this.team = team;
-}
+Fede.constructor =  function Footballer(name, position, team) {
+        Person.call(this, name);
+        this.position = position;
+        this.team = team;        
+    }
 
 {sayHi} Hey there, Federico!
 {shoot} Federico attempted a goal AND SCORES!!
@@ -76,15 +76,15 @@ Object.getPrototypeOf(Fede) === Defender.prototype     false
 ---John---
 ------------
 
-John.__proto__ =  { constructor: [Function], tackle: [Function] }
+John.__proto__ =  { constructor: [Function: Defender], tackle: [Function] }
 
 (John.constructor === Person)  false
 (John.constructor === Footballer)  false
 (John.constructor === Defender)  true
 
-John.constructor =  function (name, team) {
-    Footballer.call(this, name, 2, team);   //  We are a super defensive team, and we know all defenders play in the number 2 position
-}
+John.constructor =  function Defender(name, team) {
+        Footballer.call(this, name, 2, team);   //  We are a super defensive team, and we know all defenders play in the number 2 position
+    }
 
 {sayHi} Hey there, John!
 {shoot} John attempted a goal AND SCORES!!

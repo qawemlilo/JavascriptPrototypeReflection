@@ -19,7 +19,7 @@ are reflected in instance objects even if the changes are made after the instant
         //Not in browser
         var fs = require('fs');
 
-        process.__defineGetter__('stdout', function() { return fs.createWriteStream('output/method1_output.txt', {flags:'a'}) })
+        process.__defineGetter__('stdout', function() { return fs.createWriteStream('output/method2_output.txt', {flags:'a'}) })
     }
 }
 

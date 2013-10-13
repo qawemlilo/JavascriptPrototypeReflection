@@ -24,7 +24,7 @@ Contra:
         //Not in browser
         var fs = require('fs');
 
-        process.__defineGetter__('stdout', function() { return fs.createWriteStream('output/method1_output.txt', {flags:'a'}) })
+        process.__defineGetter__('stdout', function() { return fs.createWriteStream('output/method3_output.txt', {flags:'a'}) })
     }
 }
 

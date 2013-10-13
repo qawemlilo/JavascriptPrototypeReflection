@@ -1,0 +1,93 @@
+Inheritance (composition) method three: bare objects
+
+>>>>>>>>>>>>>>-----------------------<<<<<<<<<<<<<<<
+         Testing Base Objects self-reflection
+>>>>>>>>>>>>>>-----------------------<<<<<<<<<<<<<<<
+
+Person.isPrototypeOf(Footballer)     true
+Object.getPrototypeOf(Footballer) === Person     true
+
+Person.isPrototypeOf(Defender)     true
+Footballer.isPrototypeOf(Defender)     true
+Object.getPrototypeOf(Defender) === Person     false
+Object.getPrototypeOf(Defender) === Footballer     true
+
+
+>>>>>>>>>>>>>>-----------------------<<<<<<<<<<<<<<<
+         Testing Instantiated Objects
+>>>>>>>>>>>>>>-----------------------<<<<<<<<<<<<<<<
+
+------------
+---Gaston---
+------------
+
+Gaston.__proto__ =  { init: [Function], sayHi: [Function] }
+
+(Gaston.constructor === Person)   false
+
+Gaston.constructor =  function Object() { [native code] }
+
+{sayHi} Hey there, Gaston!
+{shoot} Gaston does not know how to shoot
+{tackle} Gaston does not know how to tackle
+
+ >> Self reflection <<
+
+Person.isPrototypeOf(Gaston)     true
+Footballer.isPrototypeOf(Gaston)     false
+Defender.isPrototypeOf(Gaston)     false
+
+Object.getPrototypeOf(Gaston) === Person     true
+Object.getPrototypeOf(Gaston) === Footballer     false
+Object.getPrototypeOf(Gaston) === Defender     false
+
+------------
+---Fede---
+------------
+
+Fede.__proto__ =  { init: [Function], shoot: [Function] }
+
+(Fede.constructor === Person)  false
+(Fede.constructor === Footballer)  false
+
+Fede.constructor =  function Object() { [native code] }
+
+{sayHi} Hey there, Federico!
+{shoot} Federico attempted a goal AND SCORES!!
+{tackle} Fede does not know how to tackle
+
+ >> Self reflection <<
+
+Person.isPrototypeOf(Fede)     true
+Footballer.isPrototypeOf(Fede)     true
+Defender.isPrototypeOf(Fede)     false
+
+Object.getPrototypeOf(Fede) === Person     false
+Object.getPrototypeOf(Fede) === Footballer     true
+Object.getPrototypeOf(Fede) === Defender     false
+
+------------
+---John---
+------------
+
+John.__proto__ =  { init: [Function], tackle: [Function] }
+
+(John.constructor === Person)  false
+(John.constructor === Footballer)  false
+(John.constructor === Defender)  false
+
+John.constructor =  function Object() { [native code] }
+
+{sayHi} Hey there, John!
+{shoot} John attempted a goal AND SCORES!!
+{tackle} John, player number 2 of River Plate, risked a tackle and saved the ball
+
+ >> Self reflection <<
+
+Person.isPrototypeOf(John)     true
+Footballer.isPrototypeOf(John)     true
+Defender.isPrototypeOf(John)     true
+
+Object.getPrototypeOf(John) === Person     false
+Object.getPrototypeOf(John) === Footballer     false
+Object.getPrototypeOf(John) === Defender     true
