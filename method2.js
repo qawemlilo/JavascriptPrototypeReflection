@@ -74,6 +74,19 @@ var Defender = (function() {
     return Defender;
 })();
 
+//  Instantiate the objects
+
+
+var Gaston = new Person('Gaston');
+var Fede = new Footballer('Federico', 9, 'Newells Old Boys');
+var John = new Defender('John', 'River Plate');
+
+// =================================================================
+// =================================================================
+// =================================================================
+// That's all the code for base objects and instance objects.
+// What follows is the logging procedure.
+// Run this javacript file to get the results
 
 console.log ('Inheritance (composition) method two: constructor pattern alternative');
 console.log ();
@@ -88,16 +101,6 @@ console.log ('Defender.prototype instanceof Person    ', Defender.prototype inst
 console.log ('Defender.prototype instanceof Footballer    ', Defender.prototype instanceof Footballer);
 console.log ('Object.getPrototypeOf(Defender.prototype) === Person.prototype    ', Object.getPrototypeOf(Defender.prototype) === Person.prototype);
 console.log ('Object.getPrototypeOf(Defender.prototype) === Footballer.prototype    ', Object.getPrototypeOf(Defender.prototype) === Footballer.prototype);
-
-
-//  Instantiate the objects
-
-
-var Gaston = new Person('Gaston');
-var Fede = new Footballer('Federico', 9, 'Newells Old Boys');
-var John = new Defender('John', 'River Plate');
-
-
 
 console.log ();
 console.log ();

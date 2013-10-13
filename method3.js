@@ -61,6 +61,27 @@ Defender.tackle = function() {
 }
 
 
+//  Instantiate the objects
+
+
+var Gaston = Object.create(Person);
+Gaston.init('Gaston');
+
+var Fede = Object.create(Footballer);
+Fede.init('Federico', 9, 'Newells Old Boys');
+
+var John = Object.create(Defender)
+John.init('John', 'River Plate');
+
+
+// =================================================================
+// =================================================================
+// =================================================================
+// That's all the code for base objects and instance objects.
+// What follows is the logging procedure.
+// Run this javacript file to get the results
+
+
 console.log ('Inheritance (composition) method three: bare objects');
 console.log ();
 console.log ('>>>>>>>>>>>>>>-----------------------<<<<<<<<<<<<<<<');
@@ -75,19 +96,6 @@ console.log ('Person.isPrototypeOf(Defender)    ', Person.isPrototypeOf(Defender
 console.log ('Footballer.isPrototypeOf(Defender)    ', Footballer.isPrototypeOf(Defender));
 console.log ('Object.getPrototypeOf(Defender) === Person    ', Object.getPrototypeOf(Defender) === Person);
 console.log ('Object.getPrototypeOf(Defender) === Footballer    ', Object.getPrototypeOf(Defender) === Footballer);
-
-
-//  Instantiate the objects
-
-
-var Gaston = Object.create(Person);
-Gaston.init('Gaston');
-
-var Fede = Object.create(Footballer);
-Fede.init('Federico', 9, 'Newells Old Boys');
-
-var John = Object.create(Defender)
-John.init('John', 'River Plate');
 
 
 console.log ();
