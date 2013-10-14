@@ -1,7 +1,7 @@
 Inheritance (composition) method one: constructor pattern
 
 >>>>>>>>>>>>>>-----------------------<<<<<<<<<<<<<<<
-         Testing Constructor Objects self-reflection
+         Testing Constructor Objects reflection
 >>>>>>>>>>>>>>-----------------------<<<<<<<<<<<<<<<
 
 Footballer.prototype instanceof Person     true
@@ -33,7 +33,7 @@ Gaston.constructor =  function (name) {
 {shoot} Gaston does not know how to shoot
 {tackle} Gaston does not know how to tackle
 
- >> Self reflection <<
+ >> reflection <<
 
 Gaston instanceof Person     true
 Gaston instanceof Footballer     false
@@ -62,7 +62,7 @@ Fede.constructor =  function (name, position, team) {
 {shoot} Federico attempted a goal AND SCORES!!
 {tackle} Fede does not know how to tackle
 
- >> Self reflection <<
+ >> reflection <<
 
 Fede instanceof Person     true
 Fede instanceof Footballer     true
@@ -90,7 +90,7 @@ John.constructor =  function (name, team) {
 {shoot} John attempted a goal AND SCORES!!
 {tackle} John, player number 2 of River Plate, risked a tackle and saved the ball
 
- >> Self reflection <<
+ >> reflection <<
 
 John instanceof Person     true
 John instanceof Footballer     true

@@ -1,7 +1,7 @@
 Inheritance (composition) method three: bare objects
 
 >>>>>>>>>>>>>>-----------------------<<<<<<<<<<<<<<<
-         Testing Base Objects self-reflection
+         Testing Base Objects reflection
 >>>>>>>>>>>>>>-----------------------<<<<<<<<<<<<<<<
 
 Person.isPrototypeOf(Footballer)     true
@@ -31,7 +31,7 @@ Gaston.constructor =  function Object() { [native code] }
 {shoot} Gaston does not know how to shoot
 {tackle} Gaston does not know how to tackle
 
- >> Self reflection <<
+ >> reflection <<
 
 Person.isPrototypeOf(Gaston)     true
 Footballer.isPrototypeOf(Gaston)     false
@@ -56,7 +56,7 @@ Fede.constructor =  function Object() { [native code] }
 {shoot} Federico attempted a goal AND SCORES!!
 {tackle} Fede does not know how to tackle
 
- >> Self reflection <<
+ >> reflection <<
 
 Person.isPrototypeOf(Fede)     true
 Footballer.isPrototypeOf(Fede)     true
@@ -82,7 +82,7 @@ John.constructor =  function Object() { [native code] }
 {shoot} John attempted a goal AND SCORES!!
 {tackle} John, player number 2 of River Plate, risked a tackle and saved the ball
 
- >> Self reflection <<
+ >> reflection <<
 
 Person.isPrototypeOf(John)     true
 Footballer.isPrototypeOf(John)     true
