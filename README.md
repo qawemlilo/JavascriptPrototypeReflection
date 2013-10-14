@@ -97,7 +97,13 @@ to this:
 
 ObjectPlayground.com is a great website to visualize relationships between JavaScript objects.
 
-To visualize the objects of this repository, follow these instructions:
+If you dont want to clone the repository, here are the diagrams of each technique:
+
+* [method1.js](http://i.imgur.com/8MUs54U.png)
+* [method2.js](http://i.imgur.com/hIXwXv5.png)
+* [method3.js](http://i.imgur.com/iHR6fhc.png)
+
+If you want to test for yourself visualize the objects of this repository, follow these instructions:
 
 1. Open the inheritance technique file you want to test. For example, method1.js
 
