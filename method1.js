@@ -20,7 +20,7 @@ This file shows classic inheritance as it can be found in countless websites
     }
 }
 
-var Person = function(name) {
+function Person(name) {
     this.name = name;
 };
 
@@ -28,7 +28,7 @@ Person.prototype.sayHi = function() {
     return "Hey there, " + this.name + "!";
 };
 
-var Footballer = function(name, position, team) {
+function Footballer(name, position, team) {
     Person.call(this, name);
     this.position = position;
     this.team = team;
@@ -41,7 +41,7 @@ Footballer.prototype.shoot = function() {
     return this.name + " attempted a goal AND SCORES!!";
 };
 
-var Defender = function(name, team) {
+function Defender(name, team) {
     Footballer.call(this, name, 2, team);   //  We are a super defensive team, and we know all defenders play in the number 2 position
 };
 

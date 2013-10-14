@@ -25,7 +25,7 @@ Gaston.__proto__ =  { sayHi: [Function] }
 
 (Gaston.constructor === Person)  true
 
-Gaston.constructor =  function (name) {
+Gaston.constructor =  function Person(name) {
     this.name = name;
 }
 
@@ -47,12 +47,12 @@ Object.getPrototypeOf(Gaston) === Defender.prototype     false
 ---Fede---
 ------------
 
-Fede.__proto__ =  { constructor: [Function], shoot: [Function] }
+Fede.__proto__ =  { constructor: [Function: Footballer], shoot: [Function] }
 
 (Fede.constructor === Person)  false
 (Fede.constructor === Footballer)  true
 
-Fede.constructor =  function (name, position, team) {
+Fede.constructor =  function Footballer(name, position, team) {
     Person.call(this, name);
     this.position = position;
     this.team = team;
@@ -76,13 +76,13 @@ Object.getPrototypeOf(Fede) === Defender.prototype     false
 ---John---
 ------------
 
-John.__proto__ =  { constructor: [Function], tackle: [Function] }
+John.__proto__ =  { constructor: [Function: Defender], tackle: [Function] }
 
 (John.constructor === Person)  false
 (John.constructor === Footballer)  false
 (John.constructor === Defender)  true
 
-John.constructor =  function (name, team) {
+John.constructor =  function Defender(name, team) {
     Footballer.call(this, name, 2, team);   //  We are a super defensive team, and we know all defenders play in the number 2 position
 }
 

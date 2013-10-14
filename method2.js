@@ -4,8 +4,6 @@ This file also uses classic inheritance, but all methods and properties are (kin
 despite we still reap the benefits of prototypal inheritance in terms of performance and in flexibility: changes made to the constructor
 are reflected in instance objects even if the changes are made after the instantiation of said objects.
 
-It also generates a cleaner diagram since functions are named and not just anonymous
-
 */
 
 

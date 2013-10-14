@@ -99,7 +99,7 @@ ObjectPlayground.com is a great website to visualize relationships between JavaS
 
 If you dont want to clone the repository, here are the diagrams of each technique:
 
-* [method1.js](http://i.imgur.com/8MUs54U.png)
+* [method1.js](http://i.imgur.com/Yk1VEPv.png)
 * [method2.js](http://i.imgur.com/hIXwXv5.png)
 * [method3.js](http://i.imgur.com/iHR6fhc.png)
 
@@ -109,7 +109,7 @@ If you want to test for yourself visualize the objects of this repository, follo
 
 2. Copy all the constructors/base objects and the object instantiations. For example, in method1.js you should copy
 
-        var Person = function(name) {
+        function Person(name) {
             this.name = name;
         };
         ....
