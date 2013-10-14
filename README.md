@@ -24,7 +24,7 @@ For a **visual representation**, check the "Visual Representation" section of th
 
 For a list of *some* of the insights that you can get from this code, as well as practical examples, **be sure to check the "Conclusions" section of this file.**
 
-Although it may seem to be unnecesarily extensive testing and with some repetitions, you have to hammer this in your head, specially if you come from a class based Object Oriented Programming Language.
+Although it may seem to be unnecesarily extensive testing and with some repetitions, you have to hammer this in your head, especially if you come from a class based Object Oriented Programming Language.
 
 # What's in the .js files
 
