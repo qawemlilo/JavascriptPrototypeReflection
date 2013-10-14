@@ -16,6 +16,8 @@ The second goal of this repository is that, if you ever get confused in how shou
 
 ---------
 
+**NOTE:** *This is NOT intended to be a basic JavaScript prototypal inheritance lesson. Some knowledge, like the use of `Function.call(thisContext, params)`, is assumed*
+
 If you are familiar with JavaScript prototype chain feature but yet have to grasp it internally, this is for you. If you look at the source code and their corresponding output you can gain insight in how the prototype chain is formed and how to test objects against each other.
 
 For a **visual representation**, check the "Visual Representation" section of this file
