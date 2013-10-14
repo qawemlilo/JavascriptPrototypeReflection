@@ -1,4 +1,4 @@
-# Javascript Prototypal Inheritance Techniques and Objects sel-reflection 
+# Javascript Prototypal Inheritance Techniques and Objects reflection 
 
 ![Iroxtion](http://i.imgur.com/owiQ4go.png)
 
