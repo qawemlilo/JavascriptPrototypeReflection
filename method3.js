@@ -85,7 +85,7 @@ John.init('John', 'River Plate');
 console.log ('Inheritance (composition) method three: bare objects');
 console.log ();
 console.log ('>>>>>>>>>>>>>>-----------------------<<<<<<<<<<<<<<<');
-console.log ('         Testing Base Objects self-reflection');
+console.log ('         Testing Base Objects reflection');
 console.log ('>>>>>>>>>>>>>>-----------------------<<<<<<<<<<<<<<<');
 console.log ();
 console.log ('Person.isPrototypeOf(Footballer)    ', Person.isPrototypeOf(Footballer));
@@ -121,7 +121,7 @@ console.log ('{shoot}', (typeof Gaston.shoot == 'function') ? Gaston.shoot() : '
 console.log ('{tackle}', (typeof Gaston.tackle == 'function') ? Gaston.tackle() : 'Gaston does not know how to tackle');
 
 console.log ();
-console.log (' >> Self reflection <<');
+console.log (' >> reflection <<');
 console.log ();
 
 
@@ -151,7 +151,7 @@ console.log ('{shoot}', (typeof Fede.shoot == 'function') ? Fede.shoot() : 'Fede
 console.log ('{tackle}', (typeof Fede.tackle == 'function') ? Fede.tackle() : 'Fede does not know how to tackle');
 
 console.log ();
-console.log (' >> Self reflection <<');
+console.log (' >> reflection <<');
 console.log ();
 
 
@@ -182,7 +182,7 @@ console.log ('{shoot}', (typeof John.shoot == 'function') ? John.shoot() : 'John
 console.log ('{tackle}', (typeof John.tackle == 'function') ? John.tackle() : 'John does not know how to tackle');
 
 console.log ();
-console.log (' >> Self reflection <<');
+console.log (' >> reflection <<');
 console.log ();
 
 
