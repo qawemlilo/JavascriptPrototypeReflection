@@ -91,7 +91,7 @@ var John = new Defender('John', 'River Plate');
 console.log ('Inheritance (composition) method two: constructor pattern alternative');
 console.log ();
 console.log ('>>>>>>>>>>>>>>-----------------------<<<<<<<<<<<<<<<');
-console.log ('         Testing Base Objects self-reflection');
+console.log ('         Testing Constructor Objects self-reflection');
 console.log ('>>>>>>>>>>>>>>-----------------------<<<<<<<<<<<<<<<');
 console.log ();
 console.log ('Footballer.prototype instanceof Person    ', Footballer.prototype instanceof Person);
