@@ -132,7 +132,7 @@ If you want to test for yourself visualize the objects of this repository, follo
         this.Fede = Fede;
         this.John = John;
 
-    If you are creating a diagram for Object Linking (method3.js), this is not necesary, but you might want to also add:
+    If you are creating a diagram for Object Linking (method3.js), this is not necesary but recommended, as it changes some confusing names in the diagram. If you do, you need to put this BEFORE the previous snippet, or it wont make any difference:
 
         this.Person = Person;
         this.Footballer = Footballer;
