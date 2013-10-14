@@ -31,7 +31,8 @@ Inheritance achieved by two techniques:
 * Constructor Pattern (i.e. using a function)
 * Only Objects
 
-The inheritance chain is simple: there is a `Person` object thathas a `name` knows how to `sayHi()`. There is also a `Footballer` object, which inherits from `Person`, but it 
+The inheritance chain is simple, and in plain English language its as follows: there is a `Person` object that has a `name` and knows how to `sayHi()`. There is also a `Footballer` object, which inherits from `Person`, but it also can `shoot()` the ball, and as a professional footballer it's part of a `team` and has a `position`. Last but not least, there is also a `Defender` object, which inherits from `Footballer` but also knows how to `tackle()` to defend his `team`.
+We are presented with three `Person`s: Gaston, Fede and John. Of those three, Fede and John are `Footballer`s but only John is a `Defender`
 
 As of now, the repository consists of 3 main JavaScript files:
 
@@ -40,7 +41,7 @@ As of now, the repository consists of 3 main JavaScript files:
 2. **method2.js**: Classical Inheritance. Constructor Pattern. The result is the **same as method1.js**, except that all the properties and methods of the constructor are defined inside said constructor (not exactly inside the constructor, but effectively inside it in readibility terms), while still taking advantage of JavaScript's prototype chain features.
     
     I prefer this alternative, but added method1.js in case someone is not familiar, although it should be easy to understand.
-3. **method3.js**: Pure objects. No constructors. Objects are not instantiated with a function, they are created with
+3. **method3.js**: Pure objects. No constructors. Objects are not instantiated with the `new` keyword, they are created with
     `Object.create(prototypeObject)`.
 
 #Test it by Yourself
@@ -92,9 +93,9 @@ ObjectPlayground.com is a great website to visualize relationships between JavaS
 
 To visualize the objects of this repository, follow these instructions:
 
-1. Open the Inheritance Method file you want to test. For example, method1.js
+1. Open the inheritance technique file you want to test. For example, method1.js
 
-2. Copy all the base objects and the object instantiations. For example, in method1.js you should copy
+2. Copy all the constructors/base objects and the object instantiations. For example, in method1.js you should copy
 
         var Person = function(name) {
             this.name = name;
@@ -141,7 +142,7 @@ To visualize the objects of this repository, follow these instructions:
 
         superParentObject.isPrototypeOf(childObject)
 
-    All of these will return true. But these will all return false:
+    All of those will return true. But these will all return false:
 
         // Constructor pattern
         parentObject instanceof childObject
