@@ -132,6 +132,12 @@ If you want to test for yourself visualize the objects of this repository, follo
         this.Fede = Fede;
         this.John = John;
 
+    If you are creating a diagram for Object Linking (method3.js), this is not necesary, but you might want to also add:
+
+        this.Person = Person;
+        this.Footballer = Footballer;
+        this.Defender = Defender;
+
 6. Press the "Click to evaluate" button
 
 # Conclusions
