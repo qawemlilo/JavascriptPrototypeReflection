@@ -5,6 +5,7 @@ This file does not use function as contructors. Everything is an object literal.
 Advantages
 
     *   It's not necessary to manually specify the prototype of an object
+    *   As it can be seen in the diagrams, the set of relantionships is cleaner
 
 Disadvantages
 
