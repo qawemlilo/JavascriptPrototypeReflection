@@ -1,9 +1,20 @@
-http://iroxtion.com
+# Javascript Prototypal Inheritance Techniques and Objects sel-reflection 
+
+![Iroxtion](http://i.imgur.com/owiQ4go.png)
+
+[http://iroxtion.com](http://iroxtion.com)
 
 **PULL REQUESTS ARE WELCOME AND ENCOURAGED**
 
-A simple comparisson between different JavaScript inheritance (composition) approaches with 
+---------
+
+Comparisson between two popular JavaScript inheritance approaches with 
 extensive testing of the results. **The main goal of this repository is to better your understanding of JavaScript prototypal inheritance and its inner workings by showing you how different inheritance techniques are coded and how objects produced by these techniques compare to each other.**
+
+The second goal of this repository is that, if you ever get confused in how should you approach inheritance or how to compare relationships between objects, you can refresh your knowledge with a simple look at the source code and the output it generates. Comparing different techniques and their outputs in a text diff tool is particularly useful for this.
+
+
+---------
 
 If you are familiar with JavaScript prototype chain feature but yet have to grasp it internally, this is for you. If you look at the source code and their corresponding output you can gain insight in how the prototype chain is formed and how to test objects against each other.
 
@@ -14,6 +25,13 @@ For a list of *some* of the insights that you can get from this code, as well as
 Although it may seem to be unnecesarily extensive testing and with some repetitions, you have to hammer this in your head, specially if you come from a class based Object Oriented Programming Language.
 
 # What's in the .js files
+
+Inheritance achieved by two techniques:
+
+* Constructor Pattern (i.e. using a function)
+* Only Objects
+
+The inheritance chain is simple: there is a `Person` object thathas a `name` knows how to `sayHi()`. There is also a `Footballer` object, which inherits from `Person`, but it 
 
 As of now, the repository consists of 3 main JavaScript files:
 
