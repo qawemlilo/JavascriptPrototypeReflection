@@ -103,7 +103,7 @@ If you dont want to clone the repository, here are the diagrams of each techniqu
 * [method2.js](https://raw.github.com/Iroxtion/JavascriptPrototypeReflection/master/diagrams/method2.png)
 * [method3.js](https://raw.github.com/Iroxtion/JavascriptPrototypeReflection/master/diagrams/method3.png)
 
-If you want to test for yourself visualize the objects of this repository, follow these instructions:
+If you want to test for yourself and visualize the objects of this repository, follow these instructions:
 
 1. Open the inheritance technique file you want to test. For example, method1.js
 
