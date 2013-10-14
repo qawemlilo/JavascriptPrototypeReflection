@@ -46,6 +46,10 @@ As of now, the repository consists of 3 main JavaScript files:
 3. **method3.js**: Pure objects. No constructors. Objects are not instantiated with the `new` keyword, they are created with
     `Object.create(prototypeObject)`.
 
+# Where's the output?
+
+You can find the output of each technique in the `output/` folder in this repository. Alternatively, you can...
+
 #Test it by Yourself
 
 **Requirements**
