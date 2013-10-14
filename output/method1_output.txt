@@ -1,7 +1,7 @@
 Inheritance (composition) method one: constructor pattern
 
 >>>>>>>>>>>>>>-----------------------<<<<<<<<<<<<<<<
-         Testing Base Objects self-reflection
+         Testing Constructor Objects self-reflection
 >>>>>>>>>>>>>>-----------------------<<<<<<<<<<<<<<<
 
 Footballer.prototype instanceof Person     true
