@@ -22,7 +22,7 @@ This file shows classic inheritance as it can be found in countless websites
 
 function Person(name) {
     this.name = name;
-};
+}
 
 Person.prototype.sayHi = function() {
     return "Hey there, " + this.name + "!";
@@ -32,7 +32,7 @@ function Footballer(name, position, team) {
     Person.call(this, name);
     this.position = position;
     this.team = team;
-};
+}
 
 Footballer.prototype = Object.create(Person.prototype);
 Footballer.prototype.constructor = Footballer;
@@ -43,7 +43,7 @@ Footballer.prototype.shoot = function() {
 
 function Defender(name, team) {
     Footballer.call(this, name, 2, team);   //  We are a super defensive team, and we know all defenders play in the number 2 position
-};
+}
 
 Defender.prototype = Object.create(Footballer.prototype);
 Defender.prototype.constructor = Defender;
